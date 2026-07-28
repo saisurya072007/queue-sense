@@ -2,7 +2,7 @@ services:
   - type: web
     name: smartgov-kakinada
     env: node
-    buildCommand: npm run build
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && npm install
     startCommand: npm start
     envVars:
       - key: NODE_ENV
